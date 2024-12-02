@@ -1,0 +1,84 @@
+body {
+    background-color: #2f2f2f; /* fundo cinza escuro */
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-box {
+    border-radius: 15px;
+    border: 2px solid #6a0dad; /* roxo escuro */
+    background-color: #444;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px; /* Tamanho da logo */
+    height: 50px; /* Garantindo que a altura seja igual à largura */
+    border-radius: 50%; /* Tornar a imagem redonda */
+    object-fit: cover; /* Isso ajuda a manter a proporção da imagem sem distorção */
+}
+
+/* Nova imagem à esquerda */
+.left-image {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 600px; /* Tamanho da imagem à esquerda */
+    height: auto;
+}
+
+.input-box:focus {
+    border-color: #9b59b6; /* roxo mais claro */
+}
+
+.input-box:invalid {
+    border-color: red;
+}
+
+button {
+    background-color: #6a0dad; /* roxo escuro */
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 500px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+button.enabled {
+    opacity: 1;
+    pointer-events: auto;
+}
